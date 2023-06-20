@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Stadium</th>
+        <th scope="col"> Owner</th>
+        <th scope="col">Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teamsTab">
+        
+        <td>{{team.name}}</td>
+        <td>{{team.stadium}}</td>
+        <td>{{team.owner}}</td>
+       
+        <td>
+          <button class="btn btn-outline-success" (click)="dispalyTeam(team.id)">Display</button>
+          <button class="btn btn-outline-warning"> Edit</button>
+          <button class="btn btn-outline-danger"(click)="deleteTeam(team.id)">Delete</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
